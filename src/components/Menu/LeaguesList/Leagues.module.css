@@ -1,0 +1,23 @@
+
+.title {
+  padding: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.container {
+  margin: 5%;
+}
+
+.accordion__hide {
+  background: none;
+  border: none;
+}
+
+.accordion__content {
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  max-height: 0;
+}
+
