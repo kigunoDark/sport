@@ -9,7 +9,7 @@ const CountriesContainer = () => {
     axios.get('http://u0362146.plsk.regruhosting.ru/country')
     .then(res => setCountry(res.data))
     .catch(err => console.log(err))
-  });
+  },[]);
 
   return (<Countries countries={countries}/>)
 }

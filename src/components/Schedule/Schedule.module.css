@@ -3,7 +3,7 @@
   grid-template-rows: 47px auto;
   grid-gap: 10px;
   grid-area: s;
-  margin-top: 74px;
+  margin-top: 1vh;
   border-radius: 3px;
   margin-right: 16px;
 }
@@ -25,7 +25,13 @@
 
 .menu__item {
   margin-right: 32px;
+  font-style: normal;
 }
+
+.menu__item span {
+  color: rgba(45, 40, 94, 0.56);
+}
+
 .menu__item a {
   color: #1E99C7;
   transition: 0.3s;
@@ -40,6 +46,9 @@
   line-height: 16px;
 }
 
+.calendar i {
+  font-size:  20px;
+}
 .calendar span {
   padding-left: 20px;
   padding-right: 20px;
@@ -56,8 +65,44 @@
   font-size: 16px;
   line-height: 24px;
   color: #353942;
-  margin-left: 35px;
+  margin-left: 3%;
+}
+
+.league_card__info {
+  display: grid;
+  grid-template-columns: 4% 50% 23% 20%;
+}
+
+.league_board {
+  padding-bottom: 4vh;
+}
+
+.container {
+  padding: 0.5%;
+}
+.league__flag {
+  width: 27px;
+}
+.even {
+  color: rgba(53, 57, 66, 0.5);
+  font-weight: normal;
+  width: 100%;
+  font-size: 1rem;
+  border-right: 1px solid rgba(53, 57, 66, 0.25);
+}
+.odd  {
+  color: #1E99C7;
+  margin-left: 3%;
 }
 
 
+
+@media only screen and (max-width: 900px) { 
+  .schedule {
+    margin-right: 0;
+  }
+  .calendar span {
+    display: none;
+  }
+}
 

@@ -1,20 +1,13 @@
 
 .navbar {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;  
-  position: fixed;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 12vh;
-  background: #FFFFFF;
   box-shadow: 0px 2px 6px rgba(45, 40, 94, 0.06);
   grid-area: n;
+  background: #FFFFFF;
+  width: 100%;
+  align-items: center;
+  min-height: 12vh;
+  display: flex;
 }
-
 
 .title {
   text-transform: uppercase;
@@ -24,10 +17,26 @@
   width: 203px;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  align-items: center;
+}
+
+.menu__item a {
+  color: #1E99C7;
+}
+
+.left_block {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 
 .btn {
-  margin-right: 3%;
-  margin-left: auto;
+  margin-right: 10%;
+  margin-left: 20px;
   outline: none;
   cursor: pointer;
   width: 91px;
@@ -46,26 +55,108 @@
   border: 1px solid white;;
 }
 
-.menu {
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;  
-}
-
-.menu__item {
-  margin-right: 10vh;
-}
-
-.menu__item a {
-  font-size: 16px;
-  line-height: 24px;
+.search__btn {
   color: #1E99C7;
-  transition: 0.3s;
+}
+.menu__title {
+ display: none;
 }
 
+.burger  {
+  display: none;
+  padding: 6px;
+  background: #0C79A2;
+}
 
-.serch {
-  margin-left: 12%;
+@media only screen and (max-width: 900px) { 
+  .navbar {
+    display: block;
+    position: relative;
+  }
+  .title, .search__btn {
+    display: none;
+  }
+
+  .btn {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    
+  }
+
+  .disabled_menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    height: 100vh;
+    margin-right: auto;
+    position: fixed;
+    background: #353942;
+    flex-direction: column;
+    width: 40%;
+    align-items: left;
+    padding: 0px;
+    z-index: 1;
+  }
+
+  .menu__title {
+    display: block;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF 
+  }
+
+  .close_btn {
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  .menu__title span {
+    margin-left: 20px;
+  }
+
+  .menu li {
+    margin-bottom: 20px;
+  }
+
+  .menu__item a {
+    color: #FFFFFF; 
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 20px;
+  }
+
+  .menu__item a:hover {
+    color: wheat
+  }
+
+  
+   .burger {
+    display: block;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 4px;
+
+  }
+  
+  .burger {
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    left: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+  }
+
 }

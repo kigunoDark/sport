@@ -3,7 +3,7 @@
   grid-template-rows: auto auto;
   grid-gap: 10px;
   grid-area: m;
-  margin-top: 74px;
+  margin-top: 1vh;
   box-shadow: 0px 2px 6px rgba(45, 40, 94, 0.06);
   border-radius: 3px;
   color: #FFFFFF;
@@ -15,7 +15,7 @@
 }
 
 
-@media only screen and (max-width: 1000px) { 
+@media only screen and (max-width: 900px) { 
   .menu  {
     visibility: hidden;
   }
