@@ -1,25 +1,13 @@
-import React, { useState }  from  'react'
+import React from  'react'
 import l from './Leagues.module.css'
+import AccodionContainer from '../../Accordion/AccodionContainer'
 
 const Leagues = (props) => {
 
   return(
     <div className={l.leagues}>
       <h3 className={l.title}>Мои лиги</h3>
-    
-    
-      <div className={l.accordion__block}>
-        <button  className={l.accordion}>
-          <p className={l.accordion__title}>Some title</p>
-        </button>
-      </div>
-      <div className={l.accordion__content}>
-        <div
-        className={l.accordion__item}>
-          dsdada
-        </div>
-      </div>
-
+      <AccodionContainer />
     </div>
   )
 }

@@ -4,6 +4,8 @@ import ScheduleList from "./ScheduleList";
 
 const ScheduleListContainer = () => {
   const [items, setItem] = useState([]);
+  const [favorite, setFavorite] = useState(true)
+  
 
   useEffect(async () => {
    const shedules = await axios.get('http://u0362146.plsk.regruhosting.ru/match');

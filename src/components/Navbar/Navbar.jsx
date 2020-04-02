@@ -15,7 +15,7 @@ const Navbar = (props) => {
                   <span>Меню</span> 
                   <span className={n.close_btn} 
                         onClick={props.burgerTuggle}>
-                    <i class="fas fa-times"></i>
+                    <i className="fas fa-times"></i>
                   </span>
                 </li>
               <li className={n.menu__item}><a href="#">Все</a></li>
@@ -27,7 +27,7 @@ const Navbar = (props) => {
 
             <div className={n.left_block}>
             {!props.search ? 
-            <span className={n.search__btn}  onDoubleClick={props.activateSearch} > <i class="fas fa-search"></i></span> : 
+            <span className={n.search__btn}  onDoubleClick={props.activateSearch} > <i className="fas fa-search"></i></span> : 
             <input onBlur={props.deactivateSearch} 
                   className={n.search} 
                   placeholder=""/>}

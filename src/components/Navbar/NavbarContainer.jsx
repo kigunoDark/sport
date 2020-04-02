@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import Navbar from "./Navbar";
-import * as axios from 'axios'
+
 
 const NavbarContainer = () => {
   const [search, setSearch] = useState(false);
@@ -16,7 +16,6 @@ const NavbarContainer = () => {
     }
     return () => window.removeEventListener("resize", () => setSize(window.innerWidth));
   },[])
-  console.log(size)
 
   const burgerTuggle = () => setBurger(!activeBurger);
   const searchTuggle = () => setSearch(!search);

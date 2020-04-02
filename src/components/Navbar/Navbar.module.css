@@ -57,6 +57,7 @@
 
 .search__btn {
   color: #1E99C7;
+  cursor: pointer;
 }
 .menu__title {
  display: none;

@@ -14,7 +14,6 @@ const SheduleMenuContainer = () => {
       return res.data
     })
     .then(data => {
-      console.log(data)
       let presentCounter = 0;
       let futureCounter = 0;
       data.map(d => {

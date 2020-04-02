@@ -3,6 +3,7 @@
   margin: 0px;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,10 +43,9 @@ a:hover {
   .title {
     display: none;
   }
+
   .app {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: (100px, auto);
-    grid-template-areas: "n" "s" "s";
+    display: block;
   }
+
 }

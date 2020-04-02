@@ -65,12 +65,12 @@
   font-size: 16px;
   line-height: 24px;
   color: #353942;
-  margin-left: 3%;
+  margin-left: 1.8vw;
 }
 
 .league_card__info {
-  display: grid;
-  grid-template-columns: 4% 50% 23% 20%;
+  display: flex;
+  
 }
 
 .league_board {
@@ -82,18 +82,54 @@
 }
 .league__flag {
   width: 27px;
+  margin-left: 5px;
 }
-.even {
+
+.groups i {
+  cursor: pointer;
+  color: rgba(196, 196, 196, 0.25);
+  float: right;
+  margin-right: 8px;
+  transform: 0.3s;
+}
+
+.groups i:hover {
+  color: #FFC700;
+}
+
+.time {
   color: rgba(53, 57, 66, 0.5);
   font-weight: normal;
-  width: 100%;
+  text-align: center;
+  width: 5%;
+  padding: 5px 5px 0px 5px;    
   font-size: 1rem;
   border-right: 1px solid rgba(53, 57, 66, 0.25);
 }
-.odd  {
+
+.groups {
   color: #1E99C7;
-  margin-left: 3%;
+  padding: 5px 5px 0px 12px;   
+  width: 60%;
+  border-right:1px solid rgba(196, 196, 196, 0.25);
 }
+
+.status {
+  color: rgba(53, 57, 66, 0.5);
+  font-weight: normal;
+  width: 20%;
+  font-size: 1rem;
+  padding: 5px 5px 0px 12px; 
+  border-right: 1px solid rgba(53, 57, 66, 0.25);
+}
+
+.moreInf {
+  color: #1E99C7;
+  padding: 12px;
+  width: 15%;
+  padding: 5px 5px 0px 12px;   
+}
+
 
 
 
@@ -103,6 +139,35 @@
   }
   .calendar span {
     display: none;
+  }
+
+  .status {
+    display: none;
+  }
+  
+  .moreInf {
+    display: none;
+  }
+
+  .time {
+    width: 80px;
+  
+  }
+  
+  .groups {
+    width: 100%;
+  }
+
+  .menu__item, .menu__item span {
+    font-size: 12px;
+  }
+
+  .menu__item {
+    margin-right: 3.2vw;
+  }
+
+  .league_card__title  {
+    margin-left: 38px;
   }
 }
 
