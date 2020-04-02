@@ -7,7 +7,7 @@ const Leagues = (props) => {
   return(
     <div className={l.leagues}>
       <h3 className={l.title}>Мои лиги</h3>
-      <AccodionContainer />
+      {props.leagues.map((l, i) =><AccodionContainer key={i} league ={l}/>)}
     </div>
   )
 }
