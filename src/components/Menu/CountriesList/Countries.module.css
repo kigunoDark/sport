@@ -5,12 +5,13 @@
   font-weight: normal; 
 }
 
-.list_item {
+.list__item {
   margin-bottom: 13px;
+  transition: 0.5s ease;
 }
 
-.list_item a:hover {
-  color: aliceblue;
+.list__item a:hover {
+  color: rgb(209, 225, 240);
 }
 
 .title {

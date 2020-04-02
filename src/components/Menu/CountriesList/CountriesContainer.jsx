@@ -6,9 +6,15 @@ const CountriesContainer = () => {
   const [countries, setCountry] = useState([]);
    
   useEffect(() => {
-    axios.get('http://u0362146.plsk.regruhosting.ru/country')
-    .then(res => setCountry(res.data))
-    .catch(err => console.log(err))
+    (async function() {
+      try {
+        let country = await axios.get('http://u0362146.plsk.regruhosting.ru/country');
+        setCountry(country.data)
+      } catch(err) {
+        console.log(err)
+      }
+    })();
+    
   },[]);
 
   return (<Countries countries={countries}/>)

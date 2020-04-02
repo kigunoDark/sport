@@ -7,18 +7,18 @@ const LeaguesContainer = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://u0362146.plsk.regruhosting.ru/league')
-    .then(res => setLeague(res.data))
-    .catch(err => console.log(err))
-
-    axios.get('http://u0362146.plsk.regruhosting.ru/league')
-    .then(res => setData(res.data))
-    .catch(err => console.log(err))
+    (async function() {
+      try {
+        let league =  await axios.get('http://u0362146.plsk.regruhosting.ru/league');
+        setLeague(league.data);
+        setData(league.data);
+      } catch(err) {
+        console.log(err);
+      }
+    })();
   });
 
- 
-
-  return (<Leagues leagues={leagues} leagues = {data} />)
+  return (<Leagues leagues={leagues}/>)
 }
 
 export default LeaguesContainer;

@@ -54,6 +54,9 @@
   transform: 0.3s;
 }
 
+.accordion__text:hover {
+  color: rgb(209, 225, 240);
+}
 .accordion__text span:hover {
   color: #a60813;
 }

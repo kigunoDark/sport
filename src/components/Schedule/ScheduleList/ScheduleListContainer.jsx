@@ -4,37 +4,44 @@ import ScheduleList from "./ScheduleList";
 
 const ScheduleListContainer = () => {
   const [items, setItem] = useState([]);
-  const [favorite, setFavorite] = useState(true)
-  
-
-  useEffect(async () => {
-   const shedules = await axios.get('http://u0362146.plsk.regruhosting.ru/match');
-   const leauges = await axios.get('http://u0362146.plsk.regruhosting.ru/public/league');
-   const parsedData = [];
+  const [isLoading, setIsLoading] = useState(true);
  
-  for(let l of leauges.data) {
-    let league = l;
-    if(league.items.length < 1) continue;
+   useEffect(() => {
+    (async function() {
+      try {
+        const shedules = await axios.get('http://u0362146.plsk.regruhosting.ru/match');
+        const leauges = await axios.get('http://u0362146.plsk.regruhosting.ru/public/league');
+        const parsedData = [];
     
-    league.items = league.items.map(e => {
-      e.match = [];
+        for(let l of leauges.data) {
+          let league = l;
+          if(league.items.length < 1) continue;
+          
+          league.items = league.items.map(e => {
+            e.match = [];
+          
+          shedules.data.filter(m =>{
+            if(e.id === m.league_id ) {
+              m.time = new Date(m.time).getHours() + ":" + new Date(m.time).getMinutes();
+              e.match.push(m);
+              return false;
+            }
+              return true;
+            });
+              return e;
+          });  
+          parsedData.push(league);
+      } 
+        setItem(parsedData)
+        setIsLoading(false);
+      } catch(err) {
+          console.log(err)
+      }
+    })();
     
-    shedules.data.filter(m =>{
-        if(e.id === m.league_id ) {
-          m.time = new Date(m.time).getHours() + ":" + new Date(m.time).getMinutes();
-          e.match.push(m);
-          return false;
-        }
-        return true
-      });
-        return e;
-    });  
-    parsedData.push(league);
-   } 
-   setItem(parsedData)
   },[]);
 
-  return (<ScheduleList items={items} />)
+  return (<ScheduleList items={items} isLoading={isLoading} />)
 }
 
 export default ScheduleListContainer 

@@ -1,16 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import * as axios from 'axios';
+import React, {useState} from 'react'
 import Accordion from './Accordion';
 
 const AccordionContainer = (props) => {
   const [setActive, setActiveState] = useState(true);
-
   const toggleAccordion = () => { setActiveState(!setActive); }
-  console.log(props.leagues)
-  return( <Accordion active={setActive} 
-                     toggleAccordion={toggleAccordion}
-                     data={props.league} /> )
 
+  return(<Accordion active={setActive} 
+                    toggleAccordion={toggleAccordion}
+                    data={props.league} /> )
 }
 
 export default AccordionContainer ;
