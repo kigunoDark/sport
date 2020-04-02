@@ -47,15 +47,16 @@
 }
 
 .calendar i {
-  font-size:  20px;
+  font-size: 20px;
 }
+
 .calendar span {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .league_card__head {
-  display: flex;  
+  display: flex;
   align-items: center;
   padding: 12px;
   border-bottom: 1px solid rgba(53, 57, 66, 0.25);
@@ -70,7 +71,7 @@
 
 .league_card__info {
   display: flex;
-  
+
 }
 
 .league_board {
@@ -80,6 +81,7 @@
 .container {
   padding: 0.5%;
 }
+
 .league__flag {
   width: 27px;
   margin-left: 5px;
@@ -102,16 +104,16 @@
   font-weight: normal;
   text-align: center;
   width: 5%;
-  padding: 5px 5px 0px 5px;    
+  padding: 5px 5px 0px 5px;
   font-size: 1rem;
   border-right: 1px solid rgba(53, 57, 66, 0.25);
 }
 
 .groups {
   color: #1E99C7;
-  padding: 5px 5px 0px 12px;   
+  padding: 5px 5px 0px 12px;
   width: 60%;
-  border-right:1px solid rgba(196, 196, 196, 0.25);
+  border-right: 1px solid rgba(196, 196, 196, 0.25);
 }
 
 .status {
@@ -119,7 +121,7 @@
   font-weight: normal;
   width: 20%;
   font-size: 1rem;
-  padding: 5px 5px 0px 12px; 
+  padding: 5px 5px 0px 12px;
   border-right: 1px solid rgba(53, 57, 66, 0.25);
 }
 
@@ -127,14 +129,15 @@
   color: #1E99C7;
   padding: 12px;
   width: 15%;
-  padding: 5px 5px 0px 12px;   
+  padding: 5px 5px 0px 12px;
 }
 
 
-@media only screen and (max-width: 900px) { 
+@media only screen and (max-width: 900px) {
   .schedule {
     margin-right: 0;
   }
+
   .calendar span {
     display: none;
   }
@@ -142,21 +145,22 @@
   .status {
     display: none;
   }
-  
+
   .moreInf {
     display: none;
   }
 
   .time {
     width: 80px;
-  
+
   }
-  
+
   .groups {
     width: 100%;
   }
 
-  .menu__item, .menu__item span {
+  .menu__item,
+  .menu__item span {
     font-size: 12px;
   }
 
@@ -164,8 +168,11 @@
     margin-right: 3.2vw;
   }
 
-  .league_card__title  {
+  .league_card__title {
     margin-left: 38px;
   }
-}
 
+  .schedule {
+    margin-top: 3%;
+  }
+}

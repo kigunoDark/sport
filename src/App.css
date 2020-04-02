@@ -17,15 +17,19 @@ body {
   display: grid;
   grid-template-columns: 16% auto;
   grid-auto-rows: (100px, auto);
-  grid-template-areas: 
-  "n n"
-  "m s"
-  "m s";
+  grid-template-areas:
+    "n n"
+    "m s"
+    "m s";
   grid-gap: 17px;
+  max-width: 2000px;
+  margin: 0 auto;
   margin-bottom: 20px;
+  
 }
 
-ul, li {
+ul,
+li {
   display: block;
   padding: 0;
   margin: 0;
@@ -39,7 +43,7 @@ a:hover {
   color: #353942;
 }
 
-@media only screen and (max-width: 900px) { 
+@media only screen and (max-width: 900px) {
   .title {
     display: none;
   }
@@ -47,5 +51,4 @@ a:hover {
   .app {
     display: block;
   }
-
 }
